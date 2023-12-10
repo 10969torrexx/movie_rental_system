@@ -34,10 +34,8 @@ Route::middleware(['auth'])->group(function () {
     
     Route::get('delete-rent', [RentController::class, 'destroy'])->name('deleteRent');
 
+    Route::get('/profile', [UsersController::class, 'index'])->name('profile');
 
-    
-    // Route::get('/user-profile', [UsersController::class, 'index'])->name('userProfile');
-
-    // Route::post('/info-change', [UsersController::class, 'update'])->name('updateProfile');
+    Route::post('/update-profile', [UsersController::class, 'update'])->name('updateProfile');
 });
 
