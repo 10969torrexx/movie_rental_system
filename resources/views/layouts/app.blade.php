@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>[Template] Sample Inner Page</title>
+  <title>Movie Rental System</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -27,6 +27,23 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  {{-- <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>1 --}}
+
+ 
+
+   <!-- Include jQuery library -->
+   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+   <!-- Include datetimepicker plugin -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+
+    {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
 
 <body>
@@ -68,6 +85,7 @@
                 </ul>
             </li>
           @else
+            <li><a href="{{ route('rentList') }}">Rent List</a></li>
             <li class="dropdown"><a href="#"><span>{{ Auth::user()->name }}</span> <i class="bi bi-chevron-down"></i></a>
                 <ul>
                   <li><a href="#">Profile</a></li>

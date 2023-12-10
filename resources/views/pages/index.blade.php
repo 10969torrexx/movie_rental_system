@@ -66,6 +66,7 @@
                 </ul>
             </li>
           @else
+            <li><a href="{{ route('rentList') }}">Rent List</a></li>
             <li class="dropdown"><a href="#"><span>{{ Auth::user()->name }}</span> <i class="bi bi-chevron-down"></i></a>
                 <ul>
                   <li><a href="#">Profile</a></li>

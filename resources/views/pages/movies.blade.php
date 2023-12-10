@@ -6,7 +6,7 @@
 <div class="container" data-aos="fade-up">
 
     <div class="section-header">
-      <h2>Portfolio</h2>
+      <h2>Movies</h2>
       <p>Quam sed id excepturi ccusantium dolorem ut quis dolores nisi llum nostrum enim velit qui ut et autem uia reprehenderit sunt deleniti</p>
     </div>
 
@@ -35,7 +35,11 @@
                       <a href="{{ $item->image }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{ ucwords($item->title) }}"><i class="bi bi-plus"></i></a>
 
                     @else
-                      <a href="{{ route('buyProduct', ['id' => $item->id]) }}" title="{{ ucwords($item->title) }}"><i class="bi bi-cart-fill"></i></a>
+                      <a href="{{ route('rentMovie', ['id' => $item->id]) }}" title="{{ ucwords($item->title) }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+                        </svg>
+                      </a>
                     @endguest
                   </div>
                 </div>
