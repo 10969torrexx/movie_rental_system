@@ -35,10 +35,14 @@ class MoviesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Request $request)
     {
-        //
+       $product = Movies::where('id', $request->id)
+       ->first();
+
+       return view('pages.rent-movie', compact('product'));
     }
+
 
     /**
      * Update the specified resource in storage.

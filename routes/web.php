@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MoviesController;
+use App\Http\Controllers\RentController;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +23,21 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::middleware(['auth'])->group(function () {
+
+    Route::get('rent-detail', [MoviesController::class, 'show'])->name('rentMovie');
+
+    Route::post('confirm-order', [RentController::class, 'store'])->name('confirmOrder');
+
+    Route::get('rent-list', [RentController::class, 'index'])->name('rentList');
+    
+    Route::get('delete-rent', [RentController::class, 'destroy'])->name('deleteRent');
+
+
+    
+    // Route::get('/user-profile', [UsersController::class, 'index'])->name('userProfile');
+
+    // Route::post('/info-change', [UsersController::class, 'update'])->name('updateProfile');
+});
+
