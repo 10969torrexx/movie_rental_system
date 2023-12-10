@@ -27,14 +27,6 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Impact
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -57,7 +49,7 @@
 
   <header id="header" class="header d-flex align-items-center">
 
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
       <a href="/" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
@@ -67,8 +59,7 @@
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/#about">About</a></li>
-          <li><a href="/#services">Services</a></li>
-          <li><a href="/#portfolio">Portfolio</a></li>
+          <li><a href="/#movies">Movies</a></li>
           @guest
             <li class="dropdown"><a href="#"><span>Get Started</span> <i class="bi bi-chevron-down"></i></a>
                 <ul>
